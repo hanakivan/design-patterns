@@ -20,6 +20,9 @@ abstract class AbstractHandler implements IHandler {
             return $this->nextHandler->handle($request);
         }
 
+        echo PHP_EOL;
+        echo "final request";
+        print_r($request);
         return null;
     }
 }

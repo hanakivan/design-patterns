@@ -10,6 +10,8 @@ class HttpsHandler extends AbstractHandler {
         echo PHP_EOL;
         echo "is ssl";
 
+        $request->addHeader("X-Is-HTTPS", true);
+
         return parent::handle($request);
     }
 }

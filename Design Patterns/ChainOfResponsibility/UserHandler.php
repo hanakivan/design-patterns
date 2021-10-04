@@ -10,6 +10,8 @@ class UserHandler extends AbstractHandler {
         echo PHP_EOL;
         echo "authorizing user";
 
+        $request->addHeader("X-User-ID", uniqid());
+
         return parent::handle($request);
     }
 }

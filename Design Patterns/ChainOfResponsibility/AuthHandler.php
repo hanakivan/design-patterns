@@ -10,6 +10,8 @@ class AuthHandler extends AbstractHandler {
         echo PHP_EOL;
         echo "is get";
 
+        $request->addHeader("X-User-Auth", true);
+
         return parent::handle($request);
     }
 }

@@ -1,0 +1,1 @@
+1. a client wants to talk to an incompatible Adaptee

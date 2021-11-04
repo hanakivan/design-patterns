@@ -1,6 +1,6 @@
 <?php
 
-abstract class HTMLElement {
+abstract class HTMLElement implements HTMLElementInterface {
 
     protected array $childElements = [];
 
@@ -11,17 +11,17 @@ abstract class HTMLElement {
 
     public string $tagName;
 
-    public function addChildElement(HTMLElement $element)
+    public function addChildElement(HTMLElementInterface $element)
     {
         $this->childElements[] = $element;
     }
 
-    public function removeChildElement(HTMLElement $element)
+    public function removeChildElement(HTMLElementInterface $element)
     {
         $this->childElements = array_filter($this->childElements, fn(Shape $e) => $e !== $element);
     }
 
-    public function appendTo(HTMLElement $element) {
+    public function appendTo(HTMLElementInterface $element) {
         $element->addChildElement($this);
     }
 }

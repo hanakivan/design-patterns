@@ -1,5 +1,6 @@
 <?php
 
+require_once dirname(__FILE__)."/src/HTMLElementInterface.php";
 require_once dirname(__FILE__)."/src/HTMLElement.php";
 require_once dirname(__FILE__)."/src/Element.php";
 require_once dirname(__FILE__)."/src/HeadingElement.php";

@@ -10,8 +10,6 @@ class KnifeFactory {
             $knife = new ChefKnife();
         } else if ($knifeType === "steak") {
             $knife = new SteakKnife();
-        } else if ($knifeType === "break") {
-            $knife = new BreakKnife();
         } else if ($knifeType === "vegetable") {
             $knife = new VegetableKnife();
         }

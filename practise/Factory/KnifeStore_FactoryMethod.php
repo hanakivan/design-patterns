@@ -3,16 +3,11 @@
 /**
  * @property-read string $type
  */
-abstract class KnifeStore {
-
-    public function __construct(public readonly KnifeFactory $knifeFactory)
-    {
-
-    }
+abstract class KnifeStore_FactoryMethod {
 
     public function orderKnife(string $knifeType): Knife
     {
-        $knife = $this->knifeFactory->createKnife($knifeType);
+        $knife = $this->createKnife($knifeType);
 
         $knife->sharpen();
         $knife->polish();
@@ -20,4 +15,6 @@ abstract class KnifeStore {
 
         return $knife;
     }
+
+    abstract protected function createKnife(string $knifeType): Knife;
 }
